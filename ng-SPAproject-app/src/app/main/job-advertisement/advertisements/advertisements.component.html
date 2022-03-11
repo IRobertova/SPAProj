@@ -1,0 +1,15 @@
+<main><h1>Jobs</h1>
+<p>Successfully applied for {{appliedAdv?.title}}</p>
+<hr/>
+<div>
+  <a routerLink="/advertisements/create"> Create new job advertisement</a>
+</div>
+<hr>
+<section>
+  <div *ngIf="errorMessage">{{errorMessage}}</div>
+
+  <app-advertisement-item *ngFor="let adv of advertisements" [advertisement]="adv" (advClicked)="onApply($event)"
+                          (advDeleted)="onAdvDelete($event)">
+  </app-advertisement-item>
+</section>
+</main>

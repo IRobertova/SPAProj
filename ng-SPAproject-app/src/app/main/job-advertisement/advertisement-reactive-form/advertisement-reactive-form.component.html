@@ -1,0 +1,69 @@
+<main>
+  <h2>{{advertisement.id ? 'Update Job advertisement' : 'Create new Job advertisement'}}</h2>
+
+  <div class="center"><form *ngIf="formGroup" [formGroup]="formGroup"
+      (ngSubmit)="ngOnSubmit()">
+  <div>
+    <label for="title">Title</label>
+    <input type="text"
+           id="title"
+    formControlName="title">
+
+    <small *ngIf="titleFormControl.touched && titleFormControl.invalid && titleFormControl.errors?.['required']">
+      This field is required!</small>
+    <small *ngIf="titleFormControl.touched && titleFormControl.invalid && titleFormControl.hasError('maxlength')">
+      This field should contains max {{titleFormControl.errors?.['maxlength'].requiredLength}} symbols!</small>
+
+  </div>
+
+  <div>
+    <label for="position">Position</label>
+    <input type="text"
+           id="position"
+    formControlName="position">
+
+    <small *ngIf="positionFormControl.touched && positionFormControl.invalid && positionFormControl.errors?.['required']">
+      This field is required!</small>
+    <small *ngIf="positionFormControl.touched && positionFormControl.invalid && positionFormControl.hasError('maxLength')">
+      This field should contains max {{positionFormControl.errors?.['maxLength'].requiredLength}} symbols!</small>
+  </div>
+
+  <div>
+    <label for="typeJob">Type</label>
+    <input type="text"
+           id="typeJob"
+    formControlName="typeJob">
+    <small *ngIf="typeJobFormControl.touched && typeJobFormControl.invalid && typeJobFormControl.errors?.['required']">
+      This field is required!</small>
+    <small *ngIf="typeJobFormControl.touched && typeJobFormControl.invalid && typeJobFormControl.hasError('maxLength')">
+      This field should contains max {{typeJobFormControl.errors?.['maxLength'].requiredLength}} symbols!</small>
+  </div>
+
+  <div>
+    <label for="category">Category</label>
+    <input type="text"
+           id="category"
+    formControlName="category">
+
+    <small *ngIf="categoryFormControl.touched && categoryFormControl.invalid && categoryFormControl.errors?.['required']">
+      This field is required!</small>
+    <small *ngIf="categoryFormControl.touched && categoryFormControl.invalid && categoryFormControl.hasError('maxLength')">
+      This field should contains max {{categoryFormControl.errors?.['maxLength'].requiredLength}} symbols!</small>
+  </div>
+    <div>
+      <label for="description">Description</label>
+      <textarea cols="40" rows="10" type="text"
+                id="description"
+                formControlName="description"> </textarea>
+
+      <small *ngIf="descriptionFormControl.touched && descriptionFormControl.invalid && descriptionFormControl.errors?.['required']">
+        This field is required!</small>
+      <small *ngIf="descriptionFormControl.touched && descriptionFormControl.invalid && descriptionFormControl.hasError('minlength')">
+        This field should contains min {{descriptionFormControl.errors?.['minlength'].requiredLength}} symbols!</small>
+    </div>
+  <div>
+    <button type="submit" [disabled]="formGroup.invalid">Save</button>
+  </div>
+</form>
+</div>
+</main>

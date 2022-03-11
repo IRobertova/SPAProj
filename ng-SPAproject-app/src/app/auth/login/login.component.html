@@ -1,0 +1,22 @@
+<div class="center">
+  <h1>Login</h1>
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <div>
+      <input type="text" placeholder="Email"
+      formControlName="email">
+      <small *ngIf="emailFormControl.touched && emailFormControl.errors?.['required']">
+        This field is required!</small>
+    </div>
+
+    <div>
+      <input type="password" placeholder="Password"
+      formControlName="password">
+      <small *ngIf="passwordFormControl.touched && passwordFormControl.errors?.['required']">
+        This field is required!</small>
+    </div>
+
+    <div>
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>

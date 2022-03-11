@@ -1,0 +1,69 @@
+{
+  "advertisements": [
+    {
+      "id": 1,
+      "title": "Shop seller in 24/7 shop",
+      "description": "sells food and drinkssss",
+      "position": "Shop seller",
+      "typeJob": "full time",
+      "category": "Commerce"
+    },
+    {
+      "id": 2,
+      "title": "Courier in Speedy ",
+      "description": "accepts and delivers shipments ",
+      "position": "Courier",
+      "typeJob": "part time",
+      "category": "Distribution"
+    },
+    {
+      "id": 3,
+      "title": "IT in big enterprise",
+      "description": "handling with every computer, printer, photocopier and etc.",
+      "position": "Office IT expert",
+      "likes": 0,
+      "typeJob": "24/7",
+      "category": "Office"
+    },
+    {
+      "title": "heyo",
+      "description": "tghjkjhgfkjhgfhgfdghjk",
+      "position": "kjihugf",
+      "typeJob": "kjhgf",
+      "category": "kjhugtf",
+      "id": 4
+    },
+    {
+      "title": "hello",
+      "description": "its me again jihugytfdxfghj",
+      "position": "jhghjkl;'lkjhg",
+      "typeJob": "fghjkjhgfdf",
+      "category": "gvhbjnkml",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "title": "kjhgytfrdftghj",
+      "description": "nhgfdfcvgbhjnmk,lkjhgf",
+      "position": "lokjiuhgy",
+      "typeJob": "dfghj",
+      "category": "jnhgytf"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "ivan_ivanov@abv.bg",
+      "password": "123123",
+      "name": "Ivan Ivanov",
+      "role": "User"
+    },
+    {
+      "id": 2,
+      "email": "ivan_petrov@abv.bg",
+      "password": "123123",
+      "name": "IT Organisation INC",
+      "role": "Organisation"
+    }
+  ]
+}
